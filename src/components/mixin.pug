@@ -10,14 +10,15 @@ mixin btnViewAll(text="Xem thêm")
 		span=text
 		img(src=imgButton, alt="", class="w-5 h-5 svg")
 mixin HeaderLanguageVertical()
-	ul 
-		li.wpml-ls-item
-			a(href="") 
-				span.wpml-ls-native VN
-		ul 
-			li 
-				a(href="") 
-					span EN
+    .wpml-ls
+        ul 
+            li.wpml-ls-item
+                a(href="") 
+                    span.wpml-ls-native VN
+            ul 
+                li 
+                    a(href="") 
+                        span EN
 mixin HeaderLanguageHorizontal()
 	ul 
 		li.wpml-ls-item
@@ -29,3 +30,12 @@ mixin HeaderLanguageHorizontal()
 mixin BtnPrimary(text="")
 	a(href="", class='btn-primary btn ' + attributes.class)
 		span=text
+mixin ItemPrimaryNews()
+    .item
+        a.item-img(class="img-ratio ratio:pt-[371_600] zoom-img")
+            +PugImg()
+        .item-content(class="py-5 flex flex-col gap-5")
+            date() 04.03.2025
+            h3.item-title
+                a(href="") 
+                    | Bí quyết chọn thực phẩm chất lượng cao

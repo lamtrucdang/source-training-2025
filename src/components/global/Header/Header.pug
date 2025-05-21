@@ -1,0 +1,41 @@
+header
+    .header
+        .container 
+            .header-logo
+                a(href='/')
+                    img(src='./img/logo.png', alt='Logo')
+            .header-menu
+                ul
+                    li.current-menu-item
+                        a(href='/') Trang chủ
+                    li
+                        a(href='/gioi-thieu') Giới thiệu
+                    li.has-childrean
+                        a(href='') Sản phẩm
+                        ul
+                            li
+                                a(href='') Sản phẩm 1
+                            li
+                                a(href='') Sản phẩm 2
+                    li
+                        a(href='') Công bố sản phẩm
+                    li
+                        a(href='') Quy trình công nghệ
+                    li
+                        a(href='') Chứng nhận
+                    li
+                        a(href='') Tin tức
+            .header-search
+                i.fa-regular.fa-magnifying-glass
+                input(type='text', placeholder='Tìm kiếm')
+            .header-hambuger
+                .wrap
+                    span
+                    span
+                    span
+                #pulseMe
+					.bar.left
+					.bar.top
+					.bar.right
+					.bar.bottom
+.header-menu-mobile

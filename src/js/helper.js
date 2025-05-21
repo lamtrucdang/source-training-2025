@@ -1,3 +1,5 @@
+import { CountUp } from "countup.js";
+
 export function setBackgroundElement () {
 	$("[setBackground]").each(function () {
 		var background = $(this).attr("setBackground");

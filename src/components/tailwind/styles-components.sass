@@ -1,3 +1,50 @@
 @layer components
-	.item-comp
-		@apply flex
+	.item-news-primary
+		@apply flex flex-col
+		&:hover
+			h3
+				@apply text-primary-2
+		date
+			@apply w-fit
+			@apply text-sm text-Neutral-500 py-2 px-3 rounded-full bg-Neutral-50
+		.event-date
+			@apply w-fit
+			@apply text-sm text-Neutral-500 py-2 px-3 rounded-full bg-Neutral-50
+			&.is-upcoming
+				@apply text-primary-1
+		h3
+			@apply text-2xl font-bold
+	.item-service-primary
+		@apply transition-all
+		&:hover
+			@apply shadow-dropshadow-light
+			.content
+				a
+					@apply text-primary-2
+			.icon
+				&::before
+					@apply translate-x-full
+				&::after
+					@apply translate-x-0
+		.icon
+			@apply w-6 h-6 relative flex-center overflow-hidden flex-shrink-0
+			&::before,&::after
+				content: "\f061"
+				font-family: "Font Awesome 6 Pro"
+				@apply absolute-full transition-300 text-xl font-light
+			&::after
+				@apply -translate-x-full
+	.tabslet-primary
+		@apply overflow-auto pb-2
+		ul.tabslet-tab
+			@apply flex items-center gap-3
+			li
+				@apply first:ml-auto last:mr-auto
+				&.active
+					a
+						@apply bg-primary-1 text-white
+				a
+					@apply flex-center rem:min-h-[46px] px-6 rounded-full bg-Neutral-100 text-Neutral-500 transition-all
+					@apply hover:bg-primary-1 hover:text-white whitespace-nowrap
+
+

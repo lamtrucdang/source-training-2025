@@ -1,10 +1,10 @@
 @layer base
 	html
-		scroll-padding-top: 100px
+		scroll-padding-top: var(--header-height)
 	html, body
-		font-size: 15px
+		font-size: 17px
 		@screen md
-			font-size: 15px
+			font-size: 17px
 		@screen xl
 			font-size: 1vw
 	.table-responsive
@@ -40,7 +40,7 @@
 		&>div
 			@apply absolute top-0 left-0 w-full h-full transition-all duration-300
 	body
-		@apply text-[#333333] text-base font-primary
+		@apply text-Neutral-950 text-base font-primary
 	.row
 		@apply flex flex-wrap -mx-[7.5px] lg:-mx-5
 	.col
@@ -85,6 +85,7 @@
 	body.disable-scroll
 		@apply overflow-hidden
 	.format-content
+		@apply lg:text-base text-[16px]
 		p
 			@apply mb-3
 		ul
@@ -97,3 +98,10 @@
 			@apply absolute top-0 left-0 w-full h-full -z-1 pointer-events-none
 	.mb-base
 		@apply lg:mb-10 mb-8
+	.gap-base
+		@apply gap-[15px] md:gap-5 lg:gap-10
+	.full-link
+		@apply absolute top-0 left-0 w-full h-full z-1
+		&::before
+			content: ''
+			@apply absolute top-0 left-0 w-full h-full bg-primary-2 opacity-0 transition-all duration-300

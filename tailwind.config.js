@@ -207,6 +207,7 @@ module.exports = {
 		},
 		extend: {
 			colors: {
+                transparent: "transparent",
 			    Primary: {
                     1: "#1a4c40",
                     2: "#ed9a22",

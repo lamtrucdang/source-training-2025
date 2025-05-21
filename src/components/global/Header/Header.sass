@@ -1,0 +1,53 @@
+header
+	@apply sticky top-0 left-0 w-full z-[999] bg-white
+    .header
+        .container
+			@apply flex items-center justify-between lg:rem:h-[100px] rem:h-[80px]
+		.header-menu
+			@media (max-width: 1199.98px)
+				@apply hidden
+			@apply h-full
+			&>ul
+				@apply flex gap-10 h-full
+				&>li
+					@apply relative flex items-center
+					&:hover
+						&>a
+							background-size: 100% 100%
+							@apply text-primary-2
+					&:first-child
+						&>a
+							@apply text-transparent text-0 leading-[1.5]
+							&::before
+								content: '\f015'
+								@apply font-awesome rem:text-[20px] font-normal text-Neutral-950
+					&[class*='has-children']
+						&:hover
+							&>ul
+								@apply opacity-100 pointer-events-auto
+						&>ul
+							@apply absolute top-full left-0 w-full opacity-0 pointer-events-none
+							@apply w-[209px] bg-primary-2
+							@apply py-5 px-6
+							@apply flex flex-col gap-3 text-white
+							li
+								a
+									+hover-underline(93%, white)
+									@apply rem:text-[16px] pb-1
+					&[class*='current-menu-item']
+						&>a
+							background-size: 100% 100%
+							@apply text-primary-2
+							&::before
+								@apply text-primary-2
+					&>a
+						+hover-underline(93%, #ef2726)
+						&:hover
+							&::before
+								@apply text-primary-2
+						@apply pb-[3px] block hover:text-primary-2 transition-all
+						@apply rem:text-[20px] font-bold
+		.header-logo
+			img
+				@apply lg:rem:w-[435px] w-[280px] max-xs:w-[200px]
+
